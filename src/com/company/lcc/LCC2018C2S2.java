@@ -3,7 +3,7 @@ package com.company.lcc;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class LCC20182S2 {
+public class LCC2018C2S2 {
     public static void main(String[] args) {
         int n, m;
         Scanner input = new Scanner(System.in);

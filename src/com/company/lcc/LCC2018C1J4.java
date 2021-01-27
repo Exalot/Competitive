@@ -2,7 +2,7 @@ package com.company.lcc;
 
 import java.util.Scanner;
 
-public class LCC20181J4 {
+public class LCC2018C1J4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();

@@ -5,7 +5,7 @@ import java.lang.Math;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class LCC20194J3 {
+public class LCC2019C4J3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class LCC20181S3 {
+public class LCC2018C1S3 {
     static char[] characters;
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

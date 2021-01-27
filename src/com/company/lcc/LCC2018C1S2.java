@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class LCC20181S2 {
+public class LCC2018C1S2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int result = 0;
