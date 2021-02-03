@@ -15,9 +15,11 @@ public class CCC2013J4 {
         }
         Arrays.sort(chores);
         int result = 0;
+        int currentTime = 0;
         for (int chore: chores) {
-            if (result + chore <= t) {
+            if (currentTime + chore <= t) {
                 result += 1;
+                currentTime += chore;
             }
         }
         System.out.println(result);

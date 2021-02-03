@@ -25,14 +25,11 @@ public class CCC2015J4 {
                     currentTime += 1;
                     break;
                 case "S":
-                    if (!messegesMap.containsKey(friend)) {
-                        messegesMap.put(friend, new ArrayList<>());
-                    }
                     messegesMap.get(friend).add(-currentTime);
                     currentTime += 1;
                     break;
                 case "W":
-                    currentTime += friend;
+                    currentTime += friend - 1;
                     break;
             }
         }
@@ -46,6 +43,7 @@ public class CCC2015J4 {
             for (int i = 0; i < currentArray.size(); i++) {
                 if (i == 0) {
                     recievedTime = currentArray.get(i);
+                    isWaiting = true;
                 }
                 else {
                     if (currentArray.get(i) >= 0 && !isWaiting) {
@@ -58,6 +56,9 @@ public class CCC2015J4 {
                         isWaiting = false;
                     }
                 }
+            }
+            if (isWaiting) {
+                delayTime = -1;
             }
             System.out.println(friendNum + " " + delayTime);
         }
