@@ -1,6 +1,7 @@
 package com.company.lcc;
 
 import java.io.BufferedInputStream;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LCC2018C4J4 {

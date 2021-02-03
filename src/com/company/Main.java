@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.lcc.*;
+import com.company.*;
 
 public class Main {
 
@@ -12,6 +12,6 @@ public class Main {
         //LCC2018C1S3.main(args);
         //LCC2018C4J4.main(args);
         //LCC2019C1J4.main(args);
-        LCC2019C2J4.main(args);
+        //LCC2019C2J4.main(args);
     }
 }
