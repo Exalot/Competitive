@@ -28,7 +28,6 @@ public class CCC2019S1 {
 
         /*
         if (hCount % 2 == 1) {
-
         }
          */
     }

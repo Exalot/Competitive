@@ -1,4 +1,4 @@
-package com.company;
+package com.company.ccc;
 
 import com.company.essentials.Input;
 

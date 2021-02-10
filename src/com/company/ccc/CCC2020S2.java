@@ -57,7 +57,7 @@ public class CCC2020S2 {
         }
         return false;
     }
-    
+
     public static boolean check(int[] currentVertex, ArrayList<int[]> list) {
         if (currentVertex[0] == m && currentVertex[1] == n) {
             return true;

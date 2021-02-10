@@ -3,9 +3,7 @@ def j5s1():
 
     def merge(lst1, lst2):
         """Return a sorted list with the elements in <lst1> and <lst2>.
-
         Precondition: <lst1> and <lst2> are sorted
-
         @type lst1: list
         @type lst2: list
         @rtype: list
@@ -30,7 +28,6 @@ def j5s1():
 
     def mergesort(lst: list):
         """Return a sorted list with the same elements as <lst>.
-
         @type lst: list
         @type: lst
         """
@@ -148,7 +145,6 @@ class LinkedBinaryTree(object):
         return self._node._parent
 
     def sibling(self):
-        for child in self._node._parent._
         if self._node._parent._left is self:
             return self._node._parent._right
         else:

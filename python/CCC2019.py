@@ -15,8 +15,8 @@ def problemS1():
     vf = vf % 2
 
     if vf:
-        for i in [0, 2]:  
-            grid[i], grid[i+1] = grid[i+1], grid[i]
+        for i in [0, 2]:
+            grid[i], grid[i + 1] = grid[i + 1], grid[i]
 
     if hf:
         for i in [0, 1]:
@@ -26,14 +26,14 @@ def problemS1():
 
 
 def isPrime(num: int) -> bool:
-    for i in range(2,num):
+    for i in range(2, num):
         if num % i == 0:
             return False
     return True
 
 
 def factors(num: int) -> list:
-    factorList = [i for i in range(3, num*2 - 2) if isPrime(i)]
+    factorList = [i for i in range(3, num * 2 - 2) if isPrime(i)]
     return factorList
 
 
@@ -41,7 +41,7 @@ def findOutput(n: int) -> (int, int):
     lst = factors(n)
     for i in range(len(lst) - 1):
         for j in range(i, len(lst)):
-            if (lst[i] + lst[j])/2 == n:
+            if (lst[i] + lst[j]) / 2 == n:
                 return lst[i], lst[j]
 
 
@@ -69,10 +69,10 @@ def nums(lst: list) -> int:
 
 def findDeltaT(g: list):
     if nums(g) not in [0, 1]:
-            for i in range(2):
-                for j in range(i + 1, 3):
-                    if None not in [g[i], g[j]]:
-                        return (g[j] - g[i]) / j - i
+        for i in range(2):
+            for j in range(i + 1, 3):
+                if None not in [g[i], g[j]]:
+                    return (g[j] - g[i]) / j - i
 
 
 def findDeltaDeltaT(g: [list, list, list]):
@@ -94,15 +94,11 @@ def roundUp(num: float):
         return round(num)
     else:
         return(round(num) + 1)
-
-
 def findMaxNums(days: int, attractions: list):
     maxNums = []
     for i in range(days):
         maxNums.append(max(attractions))
         attractions.remove()
-
-
 def problemS4():
     n, k = (int(i) for i in input().split())
     attractions = [int(i) for i in input().split()]
@@ -112,13 +108,11 @@ def problemS4():
 
 class Triangle:
 
-
     def __init__(self, values: list, size: int) -> None:
         self.values = []
         self.size = size
         for value in values:
             self.values.append(value)
-
 
     def __getTriangle(self, rowNum: int, colNum: int) -> list:
         triangle = []
@@ -130,14 +124,12 @@ class Triangle:
             row = []
         return triangle
 
-
     def __getTriangles(self) -> list:
         triangles = []
         for rowIndex in range(len(self.values) - self.size + 1):
             for col in range(len(self.values[rowIndex])):
                 triangles.append(self.__getTriangle(rowIndex, col))
         return triangles
-
 
     def getSum(self) -> int:
         triangles = self.__getTriangles()
@@ -162,10 +154,10 @@ def problemS5() -> None:
     tri = Triangle(triangleValues, k)
     sum = tri.getSum()
     print(sum)
-    
+
 
 if __name__ == '__main__':
-    #problemS1()
-    #problemS2()
-    #problemS3()
+    # problemS1()
+    # problemS2()
+    # problemS3()
     problemS5()

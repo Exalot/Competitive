@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 public class CCC2015J4 {
     public static void main(String[] args) {
@@ -49,10 +50,9 @@ public class CCC2015J4 {
                     if (currentArray.get(i) >= 0 && !isWaiting) {
                         recievedTime = currentArray.get(i);
                         isWaiting = true;
-                    }
-                    if (currentArray.get(i) < 0 && isWaiting) {
+                    } else if (currentArray.get(i) < 0 && isWaiting) {
                         sentTime = Math.abs(currentArray.get(i));
-                        delayTime = sentTime - recievedTime;
+                        delayTime += sentTime - recievedTime;
                         isWaiting = false;
                     }
                 }
