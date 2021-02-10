@@ -7,6 +7,7 @@ public class CCC2002S3 {
     static int[][] matrix;
     static char[] commands;
     static int[][] forwardValues = {{1, 0}, {0, -1}, {-1, 0}, {0, 1}};
+
     public static void main(String[] args) {
         Scanner input = new Scanner(new BufferedInputStream(System.in));
         int r, c;
@@ -55,7 +56,7 @@ public class CCC2002S3 {
     }
 
     static void processPosition(int i, int j) {
-        if (matrix[i][j] == 0) {
+        if (matrix[i][j] == 1) {
             return;
         } else {
             for (int forwardValuesIndex = 0; forwardValuesIndex < forwardValues.length; forwardValuesIndex++) {
