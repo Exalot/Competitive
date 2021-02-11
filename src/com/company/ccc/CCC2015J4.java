@@ -4,7 +4,6 @@ import java.io.BufferedInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Set;
 
 public class CCC2015J4 {
     public static void main(String[] args) {
@@ -18,20 +17,18 @@ public class CCC2015J4 {
             type = input.next();
             friend = input.nextInt();
             switch (type) {
-                case "R":
+                case "R" -> {
                     if (!messegesMap.containsKey(friend)) {
                         messegesMap.put(friend, new ArrayList<>());
                     }
                     messegesMap.get(friend).add(currentTime);
                     currentTime += 1;
-                    break;
-                case "S":
+                }
+                case "S" -> {
                     messegesMap.get(friend).add(-currentTime);
                     currentTime += 1;
-                    break;
-                case "W":
-                    currentTime += friend - 1;
-                    break;
+                }
+                case "W" -> currentTime += friend - 1;
             }
         }
         int sentTime = 0;
