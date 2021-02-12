@@ -9,9 +9,9 @@ def problem1():
     aT = a3 * 3 + a2 * 2 + a1 * 1
     bT = b3 * 3 + b2 * 2 + b1 * 1
 
-    if (aT > bT):
+    if(aT > bT):
         print("A")
-    elif (aT < bT):
+    elif(aT < bT):
         print("B")
     else:
         print("T")
@@ -39,7 +39,7 @@ def decodeLine(line: str):
             currentChar = char
 
     result += f"{charCounter} {currentChar} "
-
+    
     return result + "\n"
 
 
@@ -60,7 +60,7 @@ def problem4():
     print("{} {}\n{} {}".format(nums[0], nums[1], nums[2], nums[3]))
 
 
-def mainProblem5(rules: list, num: int, initSeq: str, finalSeq: str, s, steps=""):
+def mainProblem5(rules: list, num: int, initSeq: str, finalSeq: str, s, steps = ""):
     if num == 0 and initSeq == finalSeq:
         return steps
     rulesAvailable = [rule for rule in rules if rule[0] in initSeq]
@@ -69,13 +69,9 @@ def mainProblem5(rules: list, num: int, initSeq: str, finalSeq: str, s, steps=""
         for rule in rulesAvailable:
             for index in range(len(initSeq)):
                 if rule[0] == initSeq[index:index + len(rule[0])]:
-                    newSteps = "{} {} {}\n".format(rule[-1], s - num,
-                                                   initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):])
-                    if (
-                    mainProblem5(rules, num - 1, initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):], finalSeq,
-                                 s, steps + newSteps)):
-                        return mainProblem5(rules, num - 1, initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):],
-                                            finalSeq, steps + newSteps)
+                    newSteps = "{} {} {}\n".format(rule[-1], s - num, initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):])
+                    if(mainProblem5(rules, num - 1, initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):], finalSeq, s, steps + newSteps)):
+                        return mainProblem5(rules, num - 1, initSeq[:index] + rule[1] + initSeq[index + len(rule[0]):], finalSeq, steps + newSteps)
 
 
 def problem5():
@@ -86,8 +82,8 @@ def problem5():
 
 
 if __name__ == "__main__":
-    # problem1()
-    # problem2()
-    # problem3()
-    # problem4()
+    #problem1()
+    #problem2()
+    #problem3()
+    #problem4()
     problem5()

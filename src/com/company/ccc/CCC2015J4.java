@@ -17,18 +17,20 @@ public class CCC2015J4 {
             type = input.next();
             friend = input.nextInt();
             switch (type) {
-                case "R" -> {
+                case "R":
                     if (!messegesMap.containsKey(friend)) {
                         messegesMap.put(friend, new ArrayList<>());
                     }
                     messegesMap.get(friend).add(currentTime);
                     currentTime += 1;
-                }
-                case "S" -> {
+                    break;
+                case "S":
                     messegesMap.get(friend).add(-currentTime);
                     currentTime += 1;
-                }
-                case "W" -> currentTime += friend - 1;
+                    break;
+                case "W":
+                    currentTime += friend - 1;
+                    break;
             }
         }
         int sentTime = 0;

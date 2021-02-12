@@ -14,7 +14,6 @@ public class DifferenceArray {
         for (int[] row : matrix) {
             Arrays.fill(row, 0);
         }
-
         int[] inputArray;
         int type, x1, y1, x2, y2, v;
         for (int i = 0; i < q; i++) {

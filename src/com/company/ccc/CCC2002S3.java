@@ -68,8 +68,8 @@ public class CCC2002S3 {
     static void processPosition(int i, int j, int forwardIndex) {
         int xPrime = j;
         int yPrime = i;
-        for (char command: commands) {
-            switch (command) {
+        for (int k = 0; k < commands.length; k++) {
+            switch (commands[k]) {
                 case 'F':
                     yPrime += forwardValues[forwardIndex][1];
                     xPrime += forwardValues[forwardIndex][0];
@@ -85,9 +85,7 @@ public class CCC2002S3 {
                     }
                     break;
             }
-            if (yPrime > matrix.length - 1 || xPrime > matrix[0].length - 1 || yPrime < 0 || xPrime < 0) {
-                return;
-            } else if (matrix[yPrime][xPrime] == 1) {
+            if (yPrime > matrix.length - 1 || xPrime > matrix[0].length - 1 || yPrime < 0 || xPrime < 0 || matrix[yPrime][xPrime] == 1) {
                 return;
             }
         }

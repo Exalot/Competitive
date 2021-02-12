@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Arrays;
 import java.util.ArrayList;
 
 public class CCC2020S5 {
