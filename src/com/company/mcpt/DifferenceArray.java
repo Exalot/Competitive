@@ -37,6 +37,7 @@ public class DifferenceArray {
         for (int i = Math.min(y1, y2) - 1; i <= Math.max(y1, y2) - 1; i++) {
             for (int j = Math.min(x1, x2) - 1; j <= Math.max(x1, x2) - 1; j++) {
                 matrix[i][j] += v;
+                //
             }
         }
     }

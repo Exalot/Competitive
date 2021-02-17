@@ -1,12 +1,13 @@
 package com.company.ccc;
 
+import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Arrays;
 
 public class CCC2020S4 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(new BufferedInputStream(System.in));
         String str = input.nextLine();
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('A', 0);
